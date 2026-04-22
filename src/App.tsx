@@ -6,30 +6,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { lazy, Suspense } from "react";
+import { Helmet, HelmetProvider } from 'react-helmet-async'; // Importation SEO
 
 // Importation des pages
-// Importation des pages avec React.lazy
-const Index = lazy(() => import("./pages/Index"));
-const Projets = lazy(() => import("./pages/Projets"));
-const Temoignages = lazy(() => import("./pages/Temoignages"));
-const Equipe = lazy(() => import("./pages/Equipe"));
-const Competences = lazy(() => import("./pages/Competences"));
-const Contact = lazy(() => import("./pages/Contact"));
-const AdminLogin = lazy(() => import("./pages/AdminLogin"));
-const AdminPanel = lazy(() => import("./pages/AdminPanel"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const MyLBDetail = lazy(() => import("./pages/MyLBDetail"));
-const FormacityDetail = lazy(() => import("./pages/FormacityDetail"));
-const CafeZoneProject = lazy(() => import("./pages/cafeDetail"));
-const WebFusionDetail = lazy(() => import("./pages/WebFusionDetail"));
-const JNBFitnessDetail = lazy(() => import("./pages/JNBFitnessDetail"));
-const TeamSection = lazy(() => import("./pages/TeamSection"));
-const Parlez = lazy(() => import("./pages/Parlez"));
-const Services = lazy(() => import("./pages/Services"));
-const AutoAssistAppDetail = lazy(() => import("./pages/AutoAssistAppDetail"));
-const BrandsCityDetail = lazy(() => import("./pages/BrandsCityDetail"));
+import Index from "./pages/Index";
+import Projets from "./pages/Projets";
+import Temoignages from "./pages/Temoignages";
+import Equipe from "./pages/Equipe";
+import Competences from "./pages/Competences";
+import Contact from "./pages/Contact";
+import AdminLogin from "./pages/AdminLogin";
+import AdminPanel from "./pages/AdminPanel";
+import NotFound from "./pages/NotFound";
+import MyLBDetail from "./pages/MyLBDetail";
+import FormacityDetail from "./pages/FormacityDetail";
+import CafeZoneProject from "./pages/cafeDetail";
+import WebFusionDetail from "./pages/WebFusionDetail";
+import JNBFitnessDetail from "./pages/JNBFitnessDetail";
+import TeamSection from "./pages/TeamSection";
+import Parlez from "./pages/Parlez";
+import Services from "./pages/Services";
+import AutoAssistAppDetail from "./pages/AutoAssistAppDetail";
+import BrandsCityDetail from "./pages/BrandsCityDetail";
 
 const queryClient = new QueryClient();
 
@@ -50,29 +48,27 @@ const App = () => (
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <AnimatePresence mode="wait">
-              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div></div>}>
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/projets" element={<Projets />} />
-                  <Route path="/projets/mylb" element={<MyLBDetail />} />
-                  <Route path="/projets/formacity" element={<FormacityDetail />} />
-                  <Route path="/projets/cafe-zone" element={<CafeZoneProject />} />
-                  <Route path="/projets/webfusion-digital" element={<WebFusionDetail />} />
-                  <Route path="/projets/jnbfitness" element={<JNBFitnessDetail />} />
-                  <Route path="/projets/autoassistapp" element={<AutoAssistAppDetail />} />
-                  <Route path="/projets/brands-city" element={<BrandsCityDetail />} />
-                  <Route path="/temoignages" element={<Temoignages />} />
-                  <Route path="/gallery" element={<TeamSection />} />
-                  <Route path="/equipe" element={<Equipe />} />
-                  <Route path="/Services" element={<Services />} />
-                  <Route path="/competences" element={<Competences />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/parlez" element={<Parlez />} />
-                  <Route path="/Admin067" element={<AdminLogin />} />
-                  <Route path="/Admin067/panel" element={<AdminPanel />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/projets" element={<Projets />} />
+                <Route path="/projets/mylb" element={<MyLBDetail />} />
+                <Route path="/projets/formacity" element={<FormacityDetail />} />
+                <Route path="/projets/cafe-zone" element={<CafeZoneProject />} />
+                <Route path="/projets/webfusion-digital" element={<WebFusionDetail />} />
+                <Route path="/projets/jnbfitness" element={<JNBFitnessDetail />} />
+                <Route path="/projets/autoassistapp" element={<AutoAssistAppDetail />} />
+                <Route path="/projets/brands-city" element={<BrandsCityDetail />} />
+                <Route path="/temoignages" element={<Temoignages />} />
+                <Route path="/gallery" element={<TeamSection />} />
+                <Route path="/equipe" element={<Equipe />} />
+                <Route path="/Services" element={<Services />} />
+                <Route path="/competences" element={<Competences />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/parlez" element={<Parlez />} />
+                <Route path="/Admin067" element={<AdminLogin />} />
+                <Route path="/Admin067/panel" element={<AdminPanel />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
             </AnimatePresence>
             <Footer />
           </div>
