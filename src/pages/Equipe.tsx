@@ -41,6 +41,30 @@ const teamMembers = [
       twitter: "#",
     },
   },
+  {
+    name: "Aziz",
+    role: "Marketing & Communication",
+    description: "Spécialiste en marketing digital et stratégie de communication. Passionné par la croissance des marques et l'engagement client.",
+    image: "aziz.webp",
+    skills: ["Marketing Digital", "Communication", "Branding", "Social Media"],
+    social: {
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+    },
+  },
+  {
+    name: "Mohamed",
+    role: "Marketing & Communication",
+    description: "Expert en stratégie de contenu et gestion des réseaux sociaux. Créatif et orienté résultats pour maximiser la visibilité de la marque.",
+    image: "mohamed.webp",
+    skills: ["Content Strategy", "SEO", "Réseaux Sociaux", "Copywriting"],
+    social: {
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+    },
+  },
 ];
 
 export default function Equipe() {
