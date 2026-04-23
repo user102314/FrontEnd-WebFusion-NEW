@@ -82,6 +82,7 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={social.name}
                   className="p-2.5 rounded-xl glass-card border border-border/50 hover:border-primary/50 transition-all"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -94,7 +95,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold font-display mb-4">Services</h4>
+            <h3 className="font-semibold font-display mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -111,7 +112,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold font-display mb-4">Entreprise</h4>
+            <h3 className="font-semibold font-display mb-4">Entreprise</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -128,7 +129,7 @@ export function Footer() {
 
           {/* Contact Info — occupe 2 colonnes sur lg */}
           <div className="lg:col-span-2">
-            <h4 className="font-semibold font-display mb-4">Contact</h4>
+            <h3 className="font-semibold font-display mb-4">Contact</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {contactInfo.map((item) => (
                 <motion.a

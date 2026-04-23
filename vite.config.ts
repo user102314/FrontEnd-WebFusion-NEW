@@ -15,4 +15,25 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Raise warning threshold to avoid noise
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        // Split vendor libs into separate cacheable chunks
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+          "vendor-motion": ["framer-motion"],
+          "vendor-query": ["@tanstack/react-query"],
+          "vendor-ui": [
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+          ],
+          "vendor-icons": ["lucide-react"],
+        },
+      },
+    },
+  },
 }));
+

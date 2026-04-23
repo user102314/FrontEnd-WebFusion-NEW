@@ -71,6 +71,9 @@ export function Navbar() {
             <img 
               src={logo} 
               alt="WebFusion Logo" 
+              width={44}
+              height={44}
+              fetchPriority="high"
               className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,212,255,0.3)]"
             />
           </motion.div>
