@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import parler from "./Parlez";
 
 import { PageTransition } from "../components/layout/PageTransition";
@@ -185,6 +186,14 @@ export default function Services() {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>Nos Services | Développement Web &amp; Marketing Digital — WebFusion</title>
+        <meta name="description" content="Découvrez les services WebFusion Digital : création de site web, tableau de bord, chatbot intelligent, publicité Meta Ads et création de contenu pour votre boutique en Tunisie." />
+        <link rel="canonical" href="https://webfusiondigital.tn/Services" />
+        <meta property="og:title" content="Nos Services | WebFusion Digital Tunisie" />
+        <meta property="og:description" content="Site web, dashboard, chatbot, Meta Ads — des solutions digitales complètes pour les boutiques tunisiennes." />
+        <meta property="og:url" content="https://webfusiondigital.tn/Services" />
+      </Helmet>
       <main className="pt-32 pb-24 relative overflow-hidden">
         {/* Éléments décoratifs */}
          

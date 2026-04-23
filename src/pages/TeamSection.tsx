@@ -194,7 +194,8 @@ export default function BestMomentsGallery() {
 
                   <img
                     src={moment.img}
-                    alt={moment.title}
+                    alt={`WebFusion Digital - ${moment.title} ${moment.date}`}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
                   />
 

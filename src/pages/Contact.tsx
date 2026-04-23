@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Sparkles, ArrowRight, Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -121,6 +122,14 @@ export default function Contact() {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>Contactez WebFusion Digital | Agence Web en Tunisie</title>
+        <meta name="description" content="Contactez WebFusion Digital pour discuter de votre projet web, mobile ou marketing. Réponse sous 24h. Basé à Tunis, Tunisie." />
+        <link rel="canonical" href="https://webfusiondigital.tn/contact" />
+        <meta property="og:title" content="Contactez WebFusion Digital" />
+        <meta property="og:description" content="Une idée ? Un projet ? Contactez notre équipe basée à Tunis pour une consultation gratuite." />
+        <meta property="og:url" content="https://webfusiondigital.tn/contact" />
+      </Helmet>
       <main className="pt-32 pb-24 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 pointer-events-none">

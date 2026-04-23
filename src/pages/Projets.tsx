@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+
 
 const projects = [
   {
@@ -101,7 +103,16 @@ const projects = [
 export default function Projets() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>Nos Réalisations | Portfolio WebFusion Digital</title>
+        <meta name="description" content="Découvrez les projets réalisés par WebFusion Digital : plateformes FinTech, applications mobiles, systèmes de gestion, e-commerce et bien plus en Tunisie." />
+        <link rel="canonical" href="https://webfusiondigital.tn/projets" />
+        <meta property="og:title" content="Nos Réalisations | Portfolio WebFusion Digital" />
+        <meta property="og:description" content="Découvrez nos projets : plateformes FinTech, apps mobiles, e-commerce et gestion en Tunisie." />
+        <meta property="og:url" content="https://webfusiondigital.tn/projets" />
+      </Helmet>
       <main className="pt-32 pb-24">
+
         <div className="container mx-auto px-4">
           {/* Header */}
           <motion.div

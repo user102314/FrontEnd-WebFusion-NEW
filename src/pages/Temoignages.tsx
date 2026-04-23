@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { Star, Send, Quote, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -260,6 +261,14 @@ export default function Temoignages() {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>Témoignages Clients | WebFusion Digital Tunisie</title>
+        <meta name="description" content="Lisez les témoignages de nos clients satisfaits et partagez votre expérience avec WebFusion Digital, agence digitale basée à Tunis." />
+        <link rel="canonical" href="https://webfusiondigital.tn/temoignages" />
+        <meta property="og:title" content="Témoignages Clients | WebFusion Digital" />
+        <meta property="og:description" content="Découvrez ce que disent nos clients de WebFusion Digital. Partagez votre avis !" />
+        <meta property="og:url" content="https://webfusiondigital.tn/temoignages" />
+      </Helmet>
       <main className="pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           {usingMockData && (

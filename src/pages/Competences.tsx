@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { 
   Code2, 
@@ -111,6 +112,14 @@ export default function Competences() {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>Compétences Techniques | WebFusion Digital Tunisie</title>
+        <meta name="description" content="Découvrez les compétences techniques de WebFusion Digital : développement web React/Node.js, mobile, cybersécurité, cloud AWS, bases de données et automatisation n8n." />
+        <link rel="canonical" href="https://webfusiondigital.tn/competences" />
+        <meta property="og:title" content="Compétences Techniques | WebFusion Digital" />
+        <meta property="og:description" content="React, Node.js, Flutter, cybersécurité, AWS, n8n — notre stack technique complet." />
+        <meta property="og:url" content="https://webfusiondigital.tn/competences" />
+      </Helmet>
       <main className="pt-32 pb-24" ref={ref}>
         <div className="container mx-auto px-4">
           {/* Header */}

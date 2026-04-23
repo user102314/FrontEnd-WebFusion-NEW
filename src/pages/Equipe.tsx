@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { Linkedin, Github, Twitter } from "lucide-react";
 import TeamSection from "./TeamSection";
@@ -110,7 +111,8 @@ function MemberCard({ member, index, isInView }: { member: TeamMember; index: nu
           >
             <img
               src={member.image}
-              alt={member.name}
+              alt={`${member.name} — ${member.role} chez WebFusion Digital`}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
             {/* Gradient Overlay */}
@@ -170,6 +172,14 @@ export default function Equipe() {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>Notre Équipe | WebFusion Digital — Experts Web &amp; Marketing</title>
+        <meta name="description" content="Découvrez l'équipe de WebFusion Digital : développeurs full-stack, experts cybersécurité, SEO et marketing digital basés en Tunisie." />
+        <link rel="canonical" href="https://webfusiondigital.tn/equipe" />
+        <meta property="og:title" content="L'équipe WebFusion Digital" />
+        <meta property="og:description" content="Une équipe passionnée de développeurs et experts digitaux basés à Tunis." />
+        <meta property="og:url" content="https://webfusiondigital.tn/equipe" />
+      </Helmet>
       <main className="pt-32 pb-24" ref={ref}>
         <div className="container mx-auto px-4">
           {/* Header */}

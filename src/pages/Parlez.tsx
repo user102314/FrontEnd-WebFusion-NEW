@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { PageTransition } from "../components/layout/PageTransition";
 import { Gift, Rocket, CheckCircle, ArrowRight, Sparkles, Star, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,6 +50,14 @@ const itemVariants = {
 export default function Parlez() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>Premier Service Gratuit | WebFusion Digital Tunisie</title>
+        <meta name="description" content="Profitez de votre premier service digital gratuitement avec WebFusion Digital. Site web, chatbot, publicité — testez notre expertise sans risque ni engagement." />
+        <link rel="canonical" href="https://webfusiondigital.tn/parlez" />
+        <meta property="og:title" content="Votre Premier Service Gratuit | WebFusion Digital" />
+        <meta property="og:description" content="Testez notre expertise sans risque. Premier service offert, sans engagement." />
+        <meta property="og:url" content="https://webfusiondigital.tn/parlez" />
+      </Helmet>
       <main className="pt-32 pb-20 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
