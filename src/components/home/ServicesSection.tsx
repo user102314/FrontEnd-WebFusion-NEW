@@ -1,6 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Smartphone, Cpu, Workflow, Palette, Lightbulb, ArrowUpRight } from "lucide-react";
+import {
+  Code2,
+  Smartphone,
+  Cpu,
+  Workflow,
+  Palette,
+  Lightbulb,
+  ArrowUpRight,
+  Share2,
+  Video,
+  FlaskConical,
+  ShieldCheck,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -45,6 +57,34 @@ const services = [
     description: "Solutions personnalisées adaptées à vos besoins spécifiques.",
     features: ["Consulting", "Architecture", "Support continu"],
     gradient: "from-neon-blue to-neon-cyan",
+  },
+  {
+    icon: Share2,
+    title: "Supervision & Analyse Réseaux Sociaux",
+    description: "Supervision et analyse de vos pages Facebook et Instagram pour piloter votre présence et vos performances.",
+    features: ["Facebook & Instagram", "Analyse d'audience", "Rapports de performance"],
+    gradient: "from-neon-purple to-primary",
+  },
+  {
+    icon: Video,
+    title: "Suivi Digital & Accompagnement Contenu",
+    description: "Accompagnement digital de vos posts et vidéos : planning, publication et suivi des résultats.",
+    features: ["Posts & vidéos", "Accompagnement éditorial", "Suivi des engagements"],
+    gradient: "from-neon-pink to-neon-blue",
+  },
+  {
+    icon: FlaskConical,
+    title: "Tests d'Applications",
+    description: "Tests fonctionnels et techniques de vos applications pour garantir qualité, stabilité et expérience utilisateur.",
+    features: ["Tests fonctionnels", "Détection de bugs", "Validation qualité"],
+    gradient: "from-primary to-neon-cyan",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Rapport d'Audit Sécurité",
+    description: "Audit de sécurité de vos systèmes et développement d'un rapport détaillé avec recommandations concrètes.",
+    features: ["Analyse des risques", "Rapport détaillé", "Plan de remédiation"],
+    gradient: "from-neon-cyan to-neon-purple",
   },
 ];
 

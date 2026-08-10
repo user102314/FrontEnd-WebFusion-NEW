@@ -71,6 +71,15 @@ const projects = [
     stack: ["React", ".NET", "MySQL"],
     gradient: "from-neon-blue to-neon-cyan",
   },
+  {
+    id: "luxury-art-tab",
+    title: "Luxury Art Tab",
+    category: "E-Commerce",
+    description: "Application e-commerce professionnelle pour la vente et la gestion de tableaux muraux de luxe : galerie client, commandes multi-canaux et dashboard analytique.",
+    image: "/luxuryarttab-cover.png",
+    stack: ["E-Commerce", "Dashboard", "Analytics"],
+    gradient: "from-neon-purple to-primary",
+  },
 ];
 // {
 //    id: "bousetta-wedding",

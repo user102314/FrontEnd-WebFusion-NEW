@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
+import { ScrollToTop } from "./components/layout/ScrollToTop";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from "react";
 
@@ -29,6 +30,7 @@ const Parlez             = lazy(() => import("./pages/Parlez"));
 const Services           = lazy(() => import("./pages/Services"));
 const AutoAssistAppDetail = lazy(() => import("./pages/AutoAssistAppDetail"));
 const BrandsCityDetail   = lazy(() => import("./pages/BrandsCityDetail"));
+const LuxuryArtTabDetail = lazy(() => import("./pages/LuxuryArtTabDetail"));
 
 // Minimal fallback — invisible spinner to avoid layout shift
 const PageLoader = () => (
@@ -53,6 +55,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <Suspense fallback={<PageLoader />}>
@@ -67,6 +70,7 @@ const App = () => (
                   <Route path="/projets/jnbfitness" element={<JNBFitnessDetail />} />
                   <Route path="/projets/autoassistapp" element={<AutoAssistAppDetail />} />
                   <Route path="/projets/brands-city" element={<BrandsCityDetail />} />
+                  <Route path="/projets/luxury-art-tab" element={<LuxuryArtTabDetail />} />
                   <Route path="/temoignages" element={<Temoignages />} />
                   <Route path="/gallery" element={<TeamSection />} />
                   <Route path="/equipe" element={<Equipe />} />
@@ -88,4 +92,4 @@ const App = () => (
   </HelmetProvider>
 );
 
-export default App;
+export default App;

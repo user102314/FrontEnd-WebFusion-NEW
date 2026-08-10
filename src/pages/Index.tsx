@@ -5,7 +5,6 @@ import { AboutSection } from "../components/home/AboutSection";
 import { ServicesSection } from "../components/home/ServicesSection";
 import { SkillsSection } from "../components/home/SkillsSection";
 import { StatsSection } from "../components/home/StatsSection";
-import { ClientsSection } from "../components/home/ClientsSection";
 import { CTASection } from "../components/home/CTASection";
 import { CollaborationSection } from "../components/home/CollaborationSection";
 
@@ -54,7 +53,6 @@ const Index = () => {
       </Helmet>
       <main>
         <HeroSection />
-        <ClientsSection />
         <AboutSection />
         <StatsSection />
         <ServicesSection />
